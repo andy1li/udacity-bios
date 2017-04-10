@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="PPT-2D-aid">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="7QL-lp-rfg" customClass="SettingsViewController" customModule="Alien_Adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SA5-4K-RsW"/>
+                        <viewControllerLayoutGuide type="bottom" id="E3d-eg-vgO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TsR-re-sKe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Fr8-0d-ouT"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-vy-bY5">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alien Adventure" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKH-so-GbX">
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e7e-L9-0yc">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <segments>
+                                            <segment title="Level 1"/>
+                                            <segment title="Level 2"/>
+                                            <segment title="Level 3"/>
+                                            <segment title="Level 4"/>
+                                        </segments>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4C-qF-hba">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Badges " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O38-PY-jwV">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3cJ-mP-lOd"/>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkD-Jb-J5Y">
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Start!">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="TZI-vy-bY5" secondAttribute="trailing" id="1CQ-u4-KO6"/>
+                            <constraint firstItem="E3d-eg-vgO" firstAttribute="top" secondItem="Fr8-0d-ouT" secondAttribute="bottom" id="5Kc-ey-EjB"/>
+                            <constraint firstItem="TZI-vy-bY5" firstAttribute="top" secondItem="SA5-4K-RsW" secondAttribute="bottom" constant="20" id="CzG-wO-fs3"/>
+                            <constraint firstItem="TZI-vy-bY5" firstAttribute="leading" secondItem="TsR-re-sKe" secondAttribute="leadingMargin" id="LxU-DM-ZPG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fr8-0d-ouT" secondAttribute="trailing" constant="-20" id="TVB-ao-y8v"/>
+                            <constraint firstItem="Fr8-0d-ouT" firstAttribute="top" secondItem="TsR-re-sKe" secondAttribute="topMargin" id="agV-YZ-vqm"/>
+                            <constraint firstItem="Fr8-0d-ouT" firstAttribute="leading" secondItem="TsR-re-sKe" secondAttribute="leadingMargin" constant="-20" id="dzh-Kp-7pO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="levelSegmentedControl" destination="e7e-L9-0yc" id="4Gt-ex-66w"/>
+                        <outlet property="showBadgesLabel" destination="O38-PY-jwV" id="oVW-7U-Ab0"/>
+                        <outlet property="showBadgesSwitch" destination="3cJ-mP-lOd" id="VVI-he-pIB"/>
+                        <outlet property="startGameButton" destination="fkD-Jb-J5Y" id="ekK-Nj-cYr"/>
+                        <outlet property="titleLabel" destination="XKH-so-GbX" id="zT7-T4-4nu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xKT-Qc-rTn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119" y="324"/>
+        </scene>
+        <!--Alien Adventure View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController storyboardIdentifier="AlienAdventureViewController" id="BV1-FR-VrT" customClass="AlienAdventureViewController" customModule="Alien_Adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="spriteKitView" destination="3se-qz-xqx" id="bdH-Dh-R0u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841" y="325"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="2208" height="621"/>
+    </resources>
+</document>
