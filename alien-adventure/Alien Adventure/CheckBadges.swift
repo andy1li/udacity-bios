@@ -9,7 +9,15 @@
 extension Hero {
     
     func checkBadges(badges: [Badge], requestTypes: [UDRequestType]) -> Bool {
-        return true
+        let types = badges.map { badge in
+            badge.requestType
+        }
+        
+        return requestTypes.map({ requestType in
+            types.contains(requestType)
+        }).reduce(true, {
+            $0 && $1
+        })
     }
     
 }
