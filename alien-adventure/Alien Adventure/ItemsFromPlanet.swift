@@ -10,8 +10,8 @@ extension Hero {
     
     func itemsFromPlanet(inventory: [UDItem], planet: String) -> [UDItem] {
 
-        return inventory.filter { item in
-            planet == (item.historicalData["PlanetOfOrigin"] as? String ?? "")
+        return inventory.filter {
+            planet == ($0.historicalData["PlanetOfOrigin"] as? String ?? "")
         }
         
     }

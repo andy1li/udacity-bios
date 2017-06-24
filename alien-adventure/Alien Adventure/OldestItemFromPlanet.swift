@@ -7,16 +7,14 @@
 //
 
 extension Hero {
+    func carbonAge(_ a: UDItem, _ b: UDItem) -> Bool {
+        return (a.historicalData["CarbonAge"] as? Int ?? 0) < (b.historicalData["CarbonAge"] as? Int ?? 0)
+    }
     
     func oldestItemFromPlanet(inventory: [UDItem], planet: String) -> UDItem? {
-        
-        return inventory.filter({ item in
-            planet == (item.historicalData["PlanetOfOrigin"] as? String ?? "")
-        }).max(by: {
-            ($0.historicalData["CarbonAge"] as? Int ?? 0) <
-            ($1.historicalData["CarbonAge"] as? Int ?? 0)
-        })
-    
+        return inventory.filter({
+            planet == ($0.historicalData["PlanetOfOrigin"] as? String ?? "")
+        }).max(by: carbonAge)
     }
 }
 

@@ -9,7 +9,9 @@
 extension Hero {
     
     func sortLeastToGreatest(inventory: [UDItem]) -> [UDItem] {
-        return [UDItem]()
+        // reusing the "<" overloading from Level 2 ItemComparison:
+        return inventory.sorted(by: <)
+        
     }
     
 }

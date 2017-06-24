@@ -10,8 +10,8 @@ extension Hero {
     
     func matchMoonRocks(inventory: [UDItem]) -> [UDItem] {
 
-        return inventory.filter {item in
-            item.name == "MoonRock"
+        return inventory.filter {
+            $0.name == "MoonRock"
         }
         
     }

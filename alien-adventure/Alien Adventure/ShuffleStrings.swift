@@ -40,15 +40,10 @@ extension Hero {
     
     func shuffleStrings(s1: String, s2: String, shuffle: String) -> Bool {
         
-        if allEmpty(s1, s2, shuffle) {
-            return true
-            
-        } else if !sameChars(s1, s2, shuffle) {
-            return false
-            
-        } else {
-            return validate(s1, s2, shuffle)
-            
-        }
+        return allEmpty(s1, s2, shuffle) || (
+               sameChars(s1, s2, shuffle) &&
+               validate(s1, s2, shuffle)
+        )
+        
     }
 }

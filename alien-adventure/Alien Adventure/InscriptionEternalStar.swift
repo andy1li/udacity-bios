@@ -10,8 +10,8 @@ extension Hero {
     
     func inscriptionEternalStar(inventory: [UDItem]) -> UDItem? {
         
-        return inventory.first(where: { item in
-            item.inscription?.contains("THE ETERNAL STAR") ?? false
+        return inventory.first(where: {
+            $0.inscription?.contains("THE ETERNAL STAR") ?? false
         })
         
     }

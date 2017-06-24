@@ -7,13 +7,12 @@
 //
 
 extension Hero {
+    func baseValue(_ a: UDItem, _ b: UDItem) -> Bool {
+        return a.baseValue < b.baseValue
+    }
     
     func leastValuableItem(inventory: [UDItem]) -> UDItem? {
-        
-        return inventory.min(by: {
-            $0.baseValue < $1.baseValue
-        })
-        
+        return inventory.min(by: baseValue)
     }
 }
 
